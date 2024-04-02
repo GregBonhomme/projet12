@@ -1,0 +1,20 @@
+{
+    "userId": {
+        "id":"6666",
+        "userInfo": {
+            "firstName":"Thomas",
+            "lastName":"Dubois",
+            "age":27
+        },
+        "todayScore":10,
+        "keyData":{
+            "calories":1930,
+            "proteines":150,
+            "glucids":290,
+            "lipids":50
+        }
+    },
+    "activity":[],
+    "average-sessions":[],
+    "performance":[]
+}
