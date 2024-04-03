@@ -1,0 +1,36 @@
+.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 90vh;
+    width: 120px;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.copyRight {
+    position: absolute;
+    bottom: 120px;
+    color: white;
+    font-size: 12px;
+    transform: rotate(-90deg);
+    min-width: 160px;
+}
