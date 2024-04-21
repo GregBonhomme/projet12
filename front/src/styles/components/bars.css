@@ -1,0 +1,21 @@
+.recharts-legend-item span {
+    color: #74798C;
+    padding: 0 10px 0 5px;
+}
+
+.yAxis,
+.xAxis {
+    font-weight: 500;
+    font-size: 18px;
+    color: #9B9EAC;
+}
+
+.bars_tooltip {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: #E60000;
+    color: white;
+    font-size: 12px;
+    padding: 15px;
+}

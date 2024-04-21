@@ -1,11 +1,11 @@
 .menu {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: black;
-    height: 90vh;
+    height: 100vh;
     width: 120px;
 }
 

@@ -16,3 +16,13 @@
 .headline p {
     font-size: 18px;
 }
+
+h2 {
+    margin: 0;
+}
+
+.graphs {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}

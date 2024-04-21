@@ -1,0 +1,19 @@
+.lines_body {
+    background-color: #FF0000;
+    border-radius: 5px;
+}
+
+.lines_tooltip {
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    padding: 0.1px 10px;
+}
+
+.lines_title {
+    font-size: 18px;
+    color: white;
+    opacity: 0.7;
+    position: absolute;
+    margin: 20px 0px 0px 20px;
+}
