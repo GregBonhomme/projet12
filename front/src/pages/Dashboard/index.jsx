@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import useFetch from "../../utils/service/useFetch"
 import Bars from "../../components/Bars"
 import Lines from "../../components/Lines"
+import RadChart from "../../components/RadChart"
 
 function Dashboard () {
 
@@ -23,6 +24,7 @@ if (user.infos) {
                 <Bars input={user.activity} />
                 <div className="smallGraphs">
                     <Lines input={user.average}/>
+                    <RadChart input={user.perfs}/>
                 </div>
             </div>
         </div>

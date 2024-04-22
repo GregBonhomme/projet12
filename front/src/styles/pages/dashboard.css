@@ -26,3 +26,7 @@ h2 {
     flex-direction: column;
     gap: 80px;
 }
+
+.smallGraphs {
+    display: flex;
+}
