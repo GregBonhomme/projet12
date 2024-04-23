@@ -36,12 +36,12 @@ function Bars ({input}) {
     }
 
     return input && (
-        <ResponsiveContainer width="70%" height={320}>
+        <ResponsiveContainer className="bars_body" width="70%" height={320}>
             <h2>Activité quotidienne</h2>
             <BarChart data={input} margin={{top: 5,right: 30, left: 20, bottom: 5,}} barGap='10%'>
                 <CartesianGrid strokeDasharray="3 3" vertical={false}/>
                 <XAxis dataKey={input.key} tickFormatter={(tick)=> tick +1} tickLine={false} tickMargin={15}/>
-                <YAxis dataKey="kilogram" yAxisId={"kg"} type="number" scale={"sequential"} domain={['dataMin - 1','dataMax +1']} allowDecimals={false} orientation="right" axisLine={false} tickLine={false} tickMargin={20}/>
+                <YAxis dataKey="kilogram" yAxisId={"kg"} type="number" scale={"sequential"} domain={['dataMin - 1','dataMax +1']} allowDecimals={false} orientation="right" axisLine={false} tickLine={false} tickMargin={20} tickCount={3}/>
                 <YAxis dataKey="calories" yAxisId={"cal"} type="number" hide={true} domain={['dataMin - 50','dataMax + 50']}/>
                 <Tooltip content={customTooltip}/>
                 <Legend iconType="circle" formatter={renderLegendText} align="right" verticalAlign="top" wrapperStyle={wrapperStyle}/>

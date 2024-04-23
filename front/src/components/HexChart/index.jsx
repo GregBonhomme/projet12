@@ -1,13 +1,12 @@
-import "../../styles/components/radchart.css"
+import "../../styles/components/hexchart.css"
 import { Radar, RadarChart,PolarGrid,PolarAngleAxis ,ResponsiveContainer } from "recharts"
 
-function RadChart ({input}) {
+function HexChart ({input}) {
 
     const formatTicks = ({ payload , x , y , cx , cy , ...rest}) => {
         
         let result = "" + input.kind[payload.value]
         result = result[0].toUpperCase() + result.slice(1)
-        console.log(result)
 
         return(
             <text
@@ -22,7 +21,7 @@ function RadChart ({input}) {
     }
 
     return (
-        <ResponsiveContainer className="rad_body" width="30%" height={300}>
+        <ResponsiveContainer className="hex_body" width="22%" aspect={1}>
             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={input.data} margin={{top:10,right:40,left:40,bottom:10}}>
                 <PolarGrid radialLines={false}/>
                 <PolarAngleAxis dataKey="kind" tick={formatTicks} tickLine={false} stroke="white"/>
@@ -32,4 +31,4 @@ function RadChart ({input}) {
     )
 }
 
-export default RadChart
+export default HexChart

@@ -1,0 +1,36 @@
+.round_body {
+    display: flex;
+    background-color: #FBFBFB;
+}
+
+.round_title {
+    position: absolute;
+    color: black;
+    margin: 20px 0px 0px 40px;
+    font-size: 20px;
+}
+
+circle {
+    fill: white;
+}
+
+.round_label_text {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: wrap;
+}
+
+.round_achievement {
+    font-size: 26px;
+    font-weight: 700;
+    fill: #282D30;
+}
+
+.round_text_filler {
+    width: 50px;
+    font-size: 18px;
+    fill: #74798C;
+}

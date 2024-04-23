@@ -3,6 +3,11 @@
     padding: 0 10px 0 5px;
 }
 
+.bars_body {
+    background-color: #FBFBFB;
+    padding: 20px 0px 50px 20px;
+}
+
 .yAxis,
 .xAxis {
     font-weight: 500;

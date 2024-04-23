@@ -24,9 +24,10 @@ h2 {
 .graphs {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 30px;
 }
 
 .smallGraphs {
     display: flex;
+    gap: 2%;
 }

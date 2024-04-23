@@ -36,7 +36,7 @@ function Lines ({input}) {
     }
 
     return input && (
-        <ResponsiveContainer className="lines_body" width={300} height={300}>
+        <ResponsiveContainer className="lines_body" width="22%" aspect={1}>
             <span className="lines_title">Durée moyenne des sessions</span>
             <LineChart data={input} margin={{top:60,right:10,left:10,bottom:50}}>
                 <defs>
