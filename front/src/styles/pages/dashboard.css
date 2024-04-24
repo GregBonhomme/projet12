@@ -21,13 +21,28 @@ h2 {
     margin: 0;
 }
 
+.dashboard_main {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .graphs {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    flex: 100% 1 0;
 }
 
 .smallGraphs {
     display: flex;
     gap: 2%;
+}
+
+.cards_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
 }

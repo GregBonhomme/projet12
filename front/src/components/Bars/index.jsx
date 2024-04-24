@@ -36,7 +36,7 @@ function Bars ({input}) {
     }
 
     return input && (
-        <ResponsiveContainer className="bars_body" width="70%" height={320}>
+        <ResponsiveContainer className="bars_body" width="90%" height={300}>
             <h2>Activité quotidienne</h2>
             <BarChart data={input} margin={{top: 5,right: 30, left: 20, bottom: 5,}} barGap='10%'>
                 <CartesianGrid strokeDasharray="3 3" vertical={false}/>

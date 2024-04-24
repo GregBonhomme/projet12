@@ -1,0 +1,32 @@
+.card_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FBFBFB;
+    border-radius: 5px;
+}
+
+.card_icon {
+    height: 60px;
+    padding: 30px;
+    aspect-ratio: 1;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 30px 30px 0px;
+}
+
+.card_value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #282D30;
+}
+
+.card_unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: #74798C;
+}
