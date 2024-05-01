@@ -17,3 +17,10 @@
     position: absolute;
     margin: 20px 0px 0px 20px;
 }
+
+@media (max-width:1024px) {
+    .lines_title {
+        font-size: 12px;
+        margin: 10px 0px 0px 10px;
+    }
+}

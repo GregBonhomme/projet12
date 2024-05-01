@@ -35,3 +35,18 @@ circle {
     font-size: 18px;
     fill: #74798C;
 }
+
+@media (max-width:1024px) {
+    .round_title {
+        font-size: 16px;
+        margin: 10px 0px 0px 15px;
+    }
+
+    .round_achievement {
+        font-size: 18px;
+    }
+
+    .round_text_filler {
+        font-size: 12px;
+    }
+}

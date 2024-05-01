@@ -51,11 +51,27 @@ h2 {
 }
 
 @media (max-width: 1024px) {
+    .headline {
+        margin-bottom: 40px;
+    }
+
+    .headline h1 {
+        font-size: 40px;
+    }
+
+    .headline p {
+        font-size: 14px;
+    }
+
     .dashboard_body {
         margin: 25px 0px 0px 160px;
     }
 
     .dashboard_main {
         gap: 40px;
+    }
+
+    .graphs {
+        gap: 20px;
     }
 }
