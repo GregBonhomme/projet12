@@ -1,6 +1,6 @@
 import "../../styles/pages/dashboard.css"
 import { useParams } from "react-router-dom"
-import useFetch from "../../utils/service/useFetch/index"
+import useFetch from "../../utils/service/useFetch"
 import Bars from "../../components/Bars"
 import Lines from "../../components/Lines"
 import HexChart from "../../components/HexChart"

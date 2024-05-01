@@ -10,7 +10,7 @@ function Header () {
                 <p className="logoTitle">SportSee</p>
             </div>
             <nav>
-                <Link>Acceuil</Link>
+                <Link>Accueil</Link>
                 <Link>Profil</Link>
                 <Link>Réglage</Link>
                 <Link>Communauté</Link>

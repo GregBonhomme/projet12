@@ -3,9 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     background-color: black;
-    height: calc(100vh + 100px);
+    height: 130vh;
     width: 120px;
 }
 
@@ -13,6 +12,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    position: relative;
+    top: 280px;
 }
 
 .menuBtn {
@@ -30,7 +31,7 @@
     position: absolute;
     bottom: 120px;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     transform: rotate(-90deg);
-    min-width: 160px;
+    min-width: 200px;
 }

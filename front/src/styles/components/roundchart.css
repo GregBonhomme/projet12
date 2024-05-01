@@ -1,6 +1,7 @@
 .round_body {
     display: flex;
     background-color: #FBFBFB;
+    border-radius: 10px;
 }
 
 .round_title {

@@ -6,7 +6,7 @@ function RoundChart ({input}) {
     let tab = [{score:achievement,fill:"red"}]
 
     return (
-        <ResponsiveContainer className="round_body" width="22%" aspect={1}>
+        <ResponsiveContainer className="round_body" width="33%" aspect={1}>
             <span className="round_title">Score</span>
             <RadialBarChart innerRadius="70%" outerRadius="100%" barSize={15} data={tab} startAngle={90} endAngle={450}>
                 <PolarAngleAxis type="number" domain={[0, 100]} dataKey="score" angleAxisId={0} tick={false}/>

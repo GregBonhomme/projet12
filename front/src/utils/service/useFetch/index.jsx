@@ -1,65 +1,42 @@
 import { useState,useEffect } from "react";
 
-function normalise (data) {
+function normalise (input) {
 
-    const id = data.profile.id
-    const keyData = data.profile.keyData
-    const infos = data.profile.userInfos
+    const id = input[0].data.id
+    const keyData = input[0].data.keyData
+    const infos = input[0].data.userInfos
     let score = 0
-    data.profile.todayScore ? (score = data.profile.todayScore) : (score = data.profile.score)
-    const perfs = data.perf
-    const average = data.average.sessions
-    const activity = data.activity.sessions
+    input[0].data.todayScore ? (score = input[0].data.todayScore) : (score = input[0].data.score)
+    const perfs = input[3].data
+    const average = input[2].data.sessions
+    const activity = input[1].data.sessions
 
     return {id,keyData,infos,score,perfs,average,activity}
 }
 
 function useFetch (userId) {
-    const [isLoading,setLoading] = useState(true)
+
     const [profile,setProfile] = useState([])
-    const [activity,setActivity] = useState([])
-    const [average,setAverage] = useState([])
-    const [perf,setPerf] = useState([])
 
     useEffect (() => {
-        if (!userId) {
-            setLoading(true)
+        const fetchData = async() => {
+            try {
+                const res = await Promise.all([
+                    fetch("http://localhost:3000/user/"+ userId),
+                    fetch("http://localhost:3000/user/"+ userId +"/activity"),
+                    fetch("http://localhost:3000/user/"+ userId +"/average-sessions"),
+                    fetch("http://localhost:3000/user/"+ userId +"/performance")
+                ])
+                const data = await Promise.all(res.map(r => r.json()))
+                setProfile(data)
+            } catch {
+                throw Error("Promise failed")
+            }
         }
-            fetch("http://localhost:3000/user/"+ userId)
-            .then((res) => res.json())
-            .then((temp) => {
-                setProfile(temp.data)
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-            fetch("http://localhost:3000/user/"+ userId +"/activity")
-            .then((res) => res.json())
-            .then((temp) => {
-                setActivity(temp.data)
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-            fetch("http://localhost:3000/user/"+ userId +"/average-sessions")
-            .then((res) => res.json())
-            .then((temp) => {
-                setAverage(temp.data)
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-            fetch("http://localhost:3000/user/"+ userId +"/performance")
-            .then((res) => res.json())
-            .then((temp) => {
-                setPerf(temp.data)
-            })
-            .catch((err) => {
-                console.log(err.message)
-            })
-        },[])
+        userId && fetchData()
+    },[])
 
-    return normalise({isLoading,profile,activity,average,perf})
+    return (profile.length > 0) && (normalise(profile))
 }
 
 export default useFetch
