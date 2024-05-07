@@ -38,7 +38,7 @@ function Bars ({input}) {
     return input && (
         <ResponsiveContainer className="bars_body" aspect={2.6}>
             <h2>Activité quotidienne</h2>
-            <BarChart data={input} margin={{top: 40,right: 30, left: 40, bottom: 5,}} barGap='10%'>
+            <BarChart data={input} margin={{top: 30,right: 30, left: 40, bottom: 30,}} barGap='10%'>
                 <CartesianGrid strokeDasharray="3 3" vertical={false}/>
                 <XAxis dataKey={input.key} tick={{fontSize:18,fontWeight:500,fill:"#9B9EAC"}} tickFormatter={(tick)=> tick +1} tickLine={false} tickMargin={15}/>
                 <YAxis dataKey="kilogram" tick={{fontSize:18,fontWeight:500,fill:"#9B9EAC"}} yAxisId={"kg"} type="number" scale={"sequential"} domain={['dataMin - 1','dataMax +1']} orientation="right" axisLine={false} tickLine={false} tickMargin={20} tickCount={3}/>

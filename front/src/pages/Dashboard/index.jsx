@@ -21,21 +21,19 @@ if (user.infos) {
                 <h1>Bonjour <span>{user.infos.firstName}</span></h1>
                 <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
-            <div className="dashboard_main">
-                <div className="graphs">
-                    <Bars input={user.activity} />
-                    <div className="smallGraphs">
-                        <Lines input={user.average}/>
-                        <HexChart input={user.perfs}/>
-                        <RoundChart input={user}/>
-                    </div>
+            <div className="graphs">
+                <Bars className="bigGraph" input={user.activity} />
+                <div className="smallGraphs">
+                    <Lines className="lineGraph" input={user.average}/>
+                    <HexChart className="hexGraph" input={user.perfs}/>
+                    <RoundChart className="roundGraph" input={user}/>
                 </div>
-                <div className="cards_list">
-                    <Card value={user.keyData.calorieCount} category="calories"/>
-                    <Card value={user.keyData.proteinCount} category="proteines"/>
-                    <Card value={user.keyData.carbohydrateCount} category="glucides"/>
-                    <Card value={user.keyData.lipidCount} category="lipides" />
-                </div>
+            </div>
+            <div className="cards_list">
+                <Card value={user.keyData.calorieCount} category="calories"/>
+                <Card value={user.keyData.proteinCount} category="proteines"/>
+                <Card value={user.keyData.carbohydrateCount} category="glucides"/>
+                <Card value={user.keyData.lipidCount} category="lipides" />
             </div>
         </div>
     )}

@@ -1,4 +1,5 @@
 .hex_body {
     background-color: #282D30;
     border-radius: 10px;
+    flex: 30% 1 1;
 }

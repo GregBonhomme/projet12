@@ -21,8 +21,8 @@ function HexChart ({input}) {
     }
 
     return (
-        <ResponsiveContainer className="hex_body" width="33%" aspect={1}>
-            <RadarChart cx="48%" cy="50%" outerRadius="80%" data={input.data} margin={{top:10,right:40,left:40,bottom:10}}>
+        <ResponsiveContainer width="30%" className="hex_body" aspect={1}>
+            <RadarChart cx="48%" cy="50%" outerRadius="80%" data={input.data} margin={{top:10,right:40,left:50,bottom:10}}>
                 <PolarGrid radialLines={false}/>
                 <PolarAngleAxis dataKey="kind" tick={formatTicks} tickLine={false} stroke="white"/>
                 <Radar dataKey="value" stroke="#FF0101B2" fill="#FF0101B2"/>

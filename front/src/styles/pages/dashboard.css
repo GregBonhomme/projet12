@@ -1,9 +1,15 @@
 .dashboard_body {
-    margin: 60px 0px 0px 240px;
+    display: grid;
+    grid-template:
+        "head head"
+        "graphs cards" / 70% 20%;
+    gap: 10%;
+    padding: 40px 0px 0px 220px;
+    box-sizing: border-box;
 }
 
 .headline {
-    margin-bottom: 70px;
+    grid-area: head;
 }
 
 .headline h1 {
@@ -18,31 +24,30 @@
 
 .headline p {
     font-size: 18px;
+    padding-top: 10px;
+    margin: 0;
 }
 
 h2 {
     margin: 0;
 }
 
-.dashboard_main {
-    display: flex;
-    width: 100%;
-    gap: 50px;
-}
-
 .graphs {
+    grid-area: graphs;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 70%;
 }
 
 .smallGraphs {
+    grid-area: smallGraphs;
     display: flex;
-    gap: 2%;
+    justify-content: space-between;
+    gap: 3%;
 }
 
 .cards_list {
+    grid-area: cards;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,10 +56,6 @@ h2 {
 }
 
 @media (max-width: 1024px) {
-    .headline {
-        margin-bottom: 40px;
-    }
-
     .headline h1 {
         font-size: 40px;
     }
@@ -64,14 +65,8 @@ h2 {
     }
 
     .dashboard_body {
-        margin: 25px 0px 0px 160px;
-    }
-
-    .dashboard_main {
-        gap: 40px;
-    }
-
-    .graphs {
-        gap: 20px;
+        padding: 30px 0px 0px 180px;
+        row-gap: 5%;
+        column-gap: 12%;
     }
 }

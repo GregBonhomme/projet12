@@ -1,6 +1,7 @@
 .lines_body {
     background-color: #FF0000;
     border-radius: 10px;
+    flex: 30% 1 1;
 }
 
 .lines_tooltip {

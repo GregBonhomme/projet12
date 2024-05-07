@@ -4,8 +4,7 @@
     align-items: center;
     background-color: #FBFBFB;
     border-radius: 10px;
-    width: 100%;
-    aspect-ratio: 2;
+    width: 260px;
 }
 
 .card_icon {
@@ -34,6 +33,10 @@
 }
 
 @media (max-width:1024px) {
+    .card_body {
+        width: 200px;
+    }
+
     .card_icon {
         padding: 16px;
         height: 60px;
