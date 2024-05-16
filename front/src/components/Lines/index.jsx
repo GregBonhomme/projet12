@@ -1,5 +1,5 @@
 import "../../styles/components/lines.css"
-import { LineChart, Line , XAxis , YAxis , Tooltip ,ResponsiveContainer, Customized} from "recharts";
+import { LineChart, Line , XAxis , YAxis , Tooltip ,ResponsiveContainer, ReferenceArea, Customized} from "recharts";
 
 function Lines ({input}) {
 
@@ -26,7 +26,6 @@ function Lines ({input}) {
 
     const customTooltip = ({active , payload}) => {
         if (active && payload && payload.length) {
-            console.log(payload)
             return (
                 <div className="lines_tooltip">
                     <p>{payload[0].value + " min"}</p>
@@ -45,6 +44,7 @@ function Lines ({input}) {
                         <stop offset="100%" stopColor="white" stopOpacity={1} />
                     </linearGradient>
                 </defs>
+                <rect height="100%" width="40%" x="60%" y={0} />
                 <XAxis dataKey="day" stroke="white" opacity={0.7} tickFormatter={formatTicks} interval={"preserveStartEnd"} padding={{left:10, right:10}} axisLine={false} tickLine={false} tickMargin={45}/>
                 <YAxis dataKey="sessionLength" hide={true}/>
                 <Tooltip content={customTooltip} cursor={false}/>

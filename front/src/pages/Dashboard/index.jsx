@@ -1,6 +1,7 @@
 import "../../styles/pages/dashboard.css"
 import { useParams } from "react-router-dom"
 import useFetch from "../../utils/service/useFetch"
+import useMock from "../../utils/service/useMock"
 import Bars from "../../components/Bars"
 import Lines from "../../components/Lines"
 import HexChart from "../../components/HexChart"
@@ -10,8 +11,9 @@ import Card from "../../components/Card"
 function Dashboard () {
 
 const {id} = useParams()
-const user = useFetch(id)
-console.log(user)
+const url = "/data/mockup.json"
+const user = useMock(id,url) //version qui utilise le mock de la base de donnée
+// pour la verion qui utilise l'api il faut utiliser :  const user = useFetch(id)   
 
 if (user.infos) {
 
@@ -36,7 +38,13 @@ if (user.infos) {
                 <Card value={user.keyData.lipidCount} category="lipides" />
             </div>
         </div>
-    )}
+)} else if (Error) {
+    return (
+        <div className="errorMsg">
+            <p>Erreur 404 <br /> Utilisateur non trouvé</p>
+        </div>
+    )
+}
 }
 
 export default Dashboard

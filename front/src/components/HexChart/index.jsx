@@ -6,7 +6,29 @@ function HexChart ({input}) {
     const formatTicks = ({ payload , x , y , cx , cy , ...rest}) => {
         
         let result = "" + input.kind[payload.value]
-        result = result[0].toUpperCase() + result.slice(1)
+        let trad =""
+        switch (result) {
+            case "cardio":
+                trad = "Cardio"
+                break;
+            case "energy":
+                trad = "Energie"
+                break;
+            case "endurance":
+                trad = "Endurance"
+                break;
+            case "strength":
+                trad = "Force"
+                break;
+            case "speed":
+                trad = "Vitesse"
+                break;
+            case "intensity":
+                trad = "Intensité"
+                break;
+            default:
+                break;
+        }
 
         return(
             <text
@@ -15,7 +37,7 @@ function HexChart ({input}) {
                 x={x + (x - cx) / 10}
                 fontSize={10}
             >
-            {result}
+            {trad}
             </text>
         )
     }

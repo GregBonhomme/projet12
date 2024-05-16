@@ -54,3 +54,13 @@
         font-size: 12px;
     }
 }
+
+@media (min-width : 1480px) {
+    .menu {
+        height: 150vh;
+    }
+
+    .menuList {
+        top: 380px;
+    }
+}
